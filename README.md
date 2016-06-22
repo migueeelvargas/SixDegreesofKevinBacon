@@ -38,10 +38,10 @@ To run `pathfinder`:
 * `test_pairs.tsv` is a file containing the various path you want to find from one actor to another.
 * `out_paths.tsv` is the output file containing the shortest paths.
 
-####Unweighted
+####unweighted
 In the unweighted mode, the program will implement a BFS traversal of the map from the starting point actor. Given that the BFS traversal is an exhaustive, each actor, *not just the one we are trying to find*, will have the shortest path from the given starting actor. Thus, when finding the shortest path, we take the ending actor and follow the path back to the starting actor. BFS guarantees that this will one of the possible shortest paths.
 
-####Weighted
+####weighted
 The weighted mode will look for shortest path based off the earliest date a movie was release in. Therefore, a Djikstra's algorithm is implemented to find the shortest path to an actor. Again, the Djikstra's algorithm is an exhaustive search & will find the shortest path to all of the other actors, not just the targeted one. Just like the unweighted mode, we will take the ending actor & follow the path back to the starting actor to find one of the possible shortest paths.
 
 ###actorconnections
