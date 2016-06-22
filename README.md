@@ -59,3 +59,58 @@ The BFS mode uses the same approach as the shown previously in the `pathfinder` 
 
 ####Union-Find
 The union-find mode implements a disjoint-set data structure that allows you to keep track of all the connected sets of actors without maintaining the graph structure. Like in the BFS mode, the program will continue to add actors in increasing years to a hash map structure. At the end of each yearly iteration, all sets of actors will connect to one leading set (the highest ranking). With an added path compression implementation, checking if two actors connect is relatively simple. All that is needed is a to check if each actor's highest ranking set & compare if the two are the same. If the same, then a connection exists that year. If not, the year will increment & the process will repeat accordingly. This will result with the earliest year two actors become connected (if a connection exists).
+
+##File structuring
+
+###movie_cast.tsv
+The provided `movie_cast.tsv` or any other cast file must maintain the following structure: 
+
+> Actor/Actress<TAB>Movie<TAB>Year<br />
+50 CENT<TAB>BEEF<TAB>2003<br />
+50 CENT<TAB>BEFORE I SELF DESTRUCT<TAB>2009<br />
+50 CENT<TAB>THE MC: WHY WE DO IT<TAB>2005<br />
+50 CENT<TAB>CAUGHT IN THE CROSSFIRE<TAB>2010<br />
+50 CENT<TAB>THE FROZEN GROUND<TAB>2013<br />
+50 CENT<TAB>BEEF III<TAB>2005<br />
+50 CENT<TAB>LAST VEGAS<TAB>2013<br />
+50 CENT<TAB>GUN<TAB>2010<br />
+...
+
+The '<TAB>' denotes a single tab character.
+
+###test_pairs.tsv
+The file containing the testing pairs for both the `pathfinder` & `actorconnections` must follow this structure: 
+
+>Actor1/Actress1 Actor2/Actress2<br />
+BACON, KEVIN (I)<TAB>HOUNSOU, DJIMON<br />
+BACON, KEVIN (I)<TAB>KIDMAN, NICOLE<br />
+BACON, KEVIN (I)<TAB>WILLIS, BRUCE<br />
+BACON, KEVIN (I)<TAB>GIAMATTI, PAUL<br />
+HOUNSOU, DJIMON<TAB>50 CENT<br />
+
+The '<TAB>' denotes a single tab character.
+
+###Output results
+
+####pathfinder
+The output results for `pathfinder` will follow a structure as follows: 
+
+> (actor)--[movie#@year]-->(actor)--...<br />
+(BACON, KEVIN (I))--[ELEPHANT WHITE#@2011]-->(HOUNSOU, DJIMON)<br />
+(BACON, KEVIN (I))--[SUPER#@2010]-->(MCKAY, COLE S.)--[FAR AND AWAY#@1992]-->(KIDMAN, NICOLE)<br />
+(BACON, KEVIN (I))--[SUPER#@2010]-->(MORENO, DARCEL WHITE)--[LAY THE FAVORITE#@2012]-->(WILLIS, BRUCE)<br />
+(BACON, KEVIN (I))--[A FEW GOOD MEN#@1992]-->(MOORE, DEMI)--[DECONSTRUCTING HARRY#@1997]-->(GIAMATTI, PAUL)<br />
+(HOUNSOU, DJIMON)--[IN AMERICA#@2002]-->(MARTINEZ, ADRIAN (I))--[MORNING GLORY#@2010]-->(50 CENT)<br />
+
+####actorconnections
+The output results for `actorconnections` will follow a structure as follows:
+
+> Actor1<TAB>Actor2<TAB>Year<br />
+BACON, KEVIN (I)<TAB>HOUNSOU, DJIMON<TAB>1992<br />
+BACON, KEVIN (I)<TAB>KIDMAN, NICOLE<TAB>1991<br />
+BACON, KEVIN (I)<TAB>WILLIS, BRUCE<TAB>1990<br />
+BACON, KEVIN (I)<TAB>GIAMATTI, PAUL<TAB>1992<br />
+HOUNSOU, DJIMON<TAB>50 CENT<TAB>2003<br />
+
+The '<TAB>' denotes a single tab character.
+
