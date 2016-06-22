@@ -8,20 +8,20 @@ The *Six Degrees of Kevin Bacon* game is based off the parlor game, the "six deg
 ##Implementation
 
 ###ActorGraph
-The _*ActorGraph*_ serves as a container for all of the actors & the movie they've each have had a role in. The implementation of the graph consists of each actor having a respective ActorNode, which, primarily holds the:
+The **_ActorGraph_** serves as a container for all of the actors & the movie they've each have had a role in. The implementation of the graph consists of each actor having a respective ActorNode, which, primarily holds the:
 
 * Actor's name
 * An adjacency list that holds all connections to all of the other actors the primary actor shares through movies.
 * A list of all the movies he or she has starred in.
 
-In the graph, each actor to other actors via an _*ActorEdge*_. The _*ActorEdge*_ connects two _*ActorNodes*_ through a common movie they've both starred in. The edge consists of: 
+In the graph, each actor to other actors via an **_ActorEdge_**. The **_ActorEdge_** connects two **_ActorNodes_** through a common movie they've both starred in. The edge consists of: 
 
 * A pointer to a movie object
 * A pointer to the primary actor
 * A pointer to the secondary actor
 * Weight integer that is calculated by `weight = 1 + (2015 - Y)`, where Y is the year the movie was released.
 
-Lastly, the last class used by the graph is the _*Movie*_ class. The _*Movie*_ class simply serves as an object for all the different movies in the graph & consist of: 
+Lastly, the last class used by the graph is the **_Movie_** class. The **_Movie_** class simply serves as an object for all the different movies in the graph & consist of: 
 
 * Movie name
 * The release date
