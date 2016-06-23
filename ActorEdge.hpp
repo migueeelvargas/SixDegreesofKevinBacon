@@ -12,6 +12,7 @@
 #ifndef ACTOREDGE_HPP
 #define ACTOREDGE_HPP
 
+/* Forward declarations */
 class ActorNode;
 class Movie;
 
