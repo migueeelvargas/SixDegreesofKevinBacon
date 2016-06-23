@@ -18,6 +18,13 @@
 
 using namespace std;
 
+/** Comparator class that is used to compare two
+  * ActorNode objects. It compares them using their
+  * distance path away from a starting ActorNode.
+  *
+  * @params: 2 ActorNode objects: lhs & rhs
+  * @returns: bool value from result of comparison
+  */
 class ActorComp {
 public:
   bool operator()(ActorNode*& lhs, ActorNode*& rhs) const {
@@ -35,10 +42,18 @@ public:
   }
 };
 
+/** Comparator class that is used to compare two
+  * Movie objects. It compares them using their
+  * release dates. The one with the highest date
+  * gets the priority
+  *
+  * @params: 2 Movie objects: lhs & rhs
+  * @returns: bool value from result of comparison
+  */
 class MovieComp {
 public:
   bool operator()(Movie*& lhs, Movie*& rhs) const {
-    // Check if distances are the same
+    // Check if dates are the same
     if (lhs->date == rhs->date) {
       // If same compare the titles
       if(lhs->name.compare(rhs->name) > 0)
@@ -52,6 +67,7 @@ public:
   }
 };
 
+/* Constructor */
 ActorGraph::ActorGraph(void) {}
 
 bool ActorGraph::loadFromFile(const char* in_filename, bool use_weighted_edges) {
@@ -213,6 +229,18 @@ void ActorGraph::BFS(ActorNode* start) {
   }
 }
 
+/** This function handles the delegated task of running
+  * Djikstra's algorithm on the the graph container given
+  * a starting point (ActorNode). The algorithm will 
+  * find the shortest weighted distance from the starting
+  * point to the each other ActorNode in the graph. In
+  * order to trace a path from the starting node to any
+  * other node, a pointer to the previous node is added
+  * to each node during the traversal.
+  *
+  * @params: start - ActorNode* - pointer to starting node
+  * @return: void
+  */
 void ActorGraph::Dijkstra(ActorNode* start) {
   resetActorFields();
 
@@ -245,6 +273,12 @@ void ActorGraph::Dijkstra(ActorNode* start) {
   }
 }
 
+/** This function handles the delegated task of reseting
+  * all the fields in every ActorNode in the graph. This
+  * is done before any BFS/Dijkstra's Algorithm search.
+  * This is to be done so there is a proper path from 
+  * any node to the starting node.
+  */
 void ActorGraph::resetActorFields() {
   for (auto actor = actorsMap.begin(); actor != actorsMap.end(); ++actor) {
     (*actor).second->dist = -1;
