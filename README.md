@@ -76,7 +76,7 @@ The provided `movie_cast.tsv` or any other cast file must maintain the following
 50 CENT&lt;TAB&gt;GUN<TAB>2010<br />
 ...
 
-The '<TAB>' denotes a single tab character.
+The &lt;TAB&gt; denotes a single tab character.
 
 ###test_pairs.tsv
 The file containing the testing pairs for both the `pathfinder` & `actorconnections` must follow this structure: 
@@ -88,7 +88,7 @@ BACON, KEVIN (I)&lt;TAB&gt;WILLIS, BRUCE<br />
 BACON, KEVIN (I)&lt;TAB&gt;GIAMATTI, PAUL<br />
 HOUNSOU, DJIMON&lt;TAB&gt;50 CENT<br />
 
-The '<TAB>' denotes a single tab character.
+The &lt;TAB&gt; denotes a single tab character.
 
 ###Output results
 
@@ -112,5 +112,5 @@ BACON, KEVIN (I)&lt;TAB&gt;WILLIS, BRUCE<TAB>1990<br />
 BACON, KEVIN (I)&lt;TAB&gt;GIAMATTI, PAUL<TAB>1992<br />
 HOUNSOU, DJIMON&lt;TAB&gt;50 CENT<TAB>2003<br />
 
-The '<TAB>' denotes a single tab character.
+The &lt;TAB&gt; denotes a single tab character.
 
