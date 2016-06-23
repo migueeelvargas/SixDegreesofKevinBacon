@@ -45,7 +45,7 @@ In the unweighted mode, the program will implement a BFS traversal of the map fr
 The weighted mode will look for shortest path based off the earliest date a movie was release in. Therefore, a Djikstra's algorithm is implemented to find the shortest path to an actor. Again, the Djikstra's algorithm is an exhaustive search & will find the shortest path to all of the other actors, not just the targeted one. Just like the unweighted mode, we will take the ending actor & follow the path back to the starting actor to find one of the possible shortest paths.
 
 ###actorconnections
-This program aims to find the earliest year that two actors become connected through the same movie. This program implements two modes to find the given year. Prior to finding the year, the movies are arranged by year they are released in ascending order.
+This program aims to find the earliest year that two actors become connected through a path of connected actors. This program implements two modes to find the given year. Prior to finding the year, the movies are arranged by year they are released in ascending order.
 
 To run `actorsconnections`: `./actorconnections movie_cast_file.tsv pair_file.tsv output_file.tsv ufind`, where: 
 
