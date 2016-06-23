@@ -65,15 +65,15 @@ The union-find mode implements a disjoint-set data structure that allows you to 
 ###movie_cast.tsv
 The provided `movie_cast.tsv` or any other cast file must maintain the following structure: 
 
-> Actor/Actress<TAB>Movie<TAB>Year<br />
-50 CENT&lt;TAB&gt;BEEF<TAB>2003<br />
-50 CENT&lt;TAB&gt;BEFORE I SELF DESTRUCT<TAB>2009<br />
-50 CENT&lt;TAB&gt;THE MC: WHY WE DO IT<TAB>2005<br />
-50 CENT&lt;TAB&gt;CAUGHT IN THE CROSSFIRE<TAB>2010<br />
-50 CENT&lt;TAB&gt;THE FROZEN GROUND<TAB>2013<br />
-50 CENT&lt;TAB&gt;BEEF III<TAB>2005<br />
-50 CENT&lt;TAB&gt;LAST VEGAS<TAB>2013<br />
-50 CENT&lt;TAB&gt;GUN<TAB>2010<br />
+> Actor/Actress&lt;TAB&gt;Movie&lt;TAB&gt;Year<br />
+50 CENT&lt;TAB&gt;BEEF&lt;TAB&gt;2003<br />
+50 CENT&lt;TAB&gt;BEFORE I SELF DESTRUCT&lt;TAB&gt;2009<br />
+50 CENT&lt;TAB&gt;THE MC: WHY WE DO IT&lt;TAB&gt;2005<br />
+50 CENT&lt;TAB&gt;CAUGHT IN THE CROSSFIRE&lt;TAB&gt;2010<br />
+50 CENT&lt;TAB&gt;THE FROZEN GROUND&lt;TAB&gt;2013<br />
+50 CENT&lt;TAB&gt;BEEF III&lt;TAB&gt;2005<br />
+50 CENT&lt;TAB&gt;LAST VEGAS&lt;TAB&gt;2013<br />
+50 CENT&lt;TAB&gt;GUN&lt;TAB&gt;2010<br />
 ...
 
 The &lt;TAB&gt; denotes a single tab character.
@@ -105,7 +105,7 @@ The output results for `pathfinder` will follow a structure as follows:
 ####actorconnections
 The output results for `actorconnections` will follow a structure as follows:
 
-> Actor1<TAB>Actor2<TAB>Year<br />
+> Actor1&lt;TAB&gt;Actor2&lt;TAB&gt;Year<br />
 BACON, KEVIN (I)&lt;TAB&gt;HOUNSOU, DJIMON<TAB>1992<br />
 BACON, KEVIN (I)&lt;TAB&gt;KIDMAN, NICOLE<TAB>1991<br />
 BACON, KEVIN (I)&lt;TAB&gt;WILLIS, BRUCE<TAB>1990<br />
