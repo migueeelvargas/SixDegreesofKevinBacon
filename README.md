@@ -66,14 +66,14 @@ The union-find mode implements a disjoint-set data structure that allows you to 
 The provided `movie_cast.tsv` or any other cast file must maintain the following structure: 
 
 > Actor/Actress<TAB>Movie<TAB>Year<br />
-50 CENT<TAB>BEEF<TAB>2003<br />
-50 CENT<TAB>BEFORE I SELF DESTRUCT<TAB>2009<br />
-50 CENT<TAB>THE MC: WHY WE DO IT<TAB>2005<br />
-50 CENT<TAB>CAUGHT IN THE CROSSFIRE<TAB>2010<br />
-50 CENT<TAB>THE FROZEN GROUND<TAB>2013<br />
-50 CENT<TAB>BEEF III<TAB>2005<br />
-50 CENT<TAB>LAST VEGAS<TAB>2013<br />
-50 CENT<TAB>GUN<TAB>2010<br />
+50 CENT&lt;TAB&gt;BEEF<TAB>2003<br />
+50 CENT&lt;TAB&gt;BEFORE I SELF DESTRUCT<TAB>2009<br />
+50 CENT&lt;TAB&gt;THE MC: WHY WE DO IT<TAB>2005<br />
+50 CENT&lt;TAB&gt;CAUGHT IN THE CROSSFIRE<TAB>2010<br />
+50 CENT&lt;TAB&gt;THE FROZEN GROUND<TAB>2013<br />
+50 CENT&lt;TAB&gt;BEEF III<TAB>2005<br />
+50 CENT&lt;TAB&gt;LAST VEGAS<TAB>2013<br />
+50 CENT&lt;TAB&gt;GUN<TAB>2010<br />
 ...
 
 The '<TAB>' denotes a single tab character.
@@ -82,11 +82,11 @@ The '<TAB>' denotes a single tab character.
 The file containing the testing pairs for both the `pathfinder` & `actorconnections` must follow this structure: 
 
 >Actor1/Actress1 Actor2/Actress2<br />
-BACON, KEVIN (I)<TAB>HOUNSOU, DJIMON<br />
-BACON, KEVIN (I)<TAB>KIDMAN, NICOLE<br />
-BACON, KEVIN (I)<TAB>WILLIS, BRUCE<br />
-BACON, KEVIN (I)<TAB>GIAMATTI, PAUL<br />
-HOUNSOU, DJIMON<TAB>50 CENT<br />
+BACON, KEVIN (I)&lt;TAB&gt;HOUNSOU, DJIMON<br />
+BACON, KEVIN (I)&lt;TAB&gt;KIDMAN, NICOLE<br />
+BACON, KEVIN (I)&lt;TAB&gt;WILLIS, BRUCE<br />
+BACON, KEVIN (I)&lt;TAB&gt;GIAMATTI, PAUL<br />
+HOUNSOU, DJIMON&lt;TAB&gt;50 CENT<br />
 
 The '<TAB>' denotes a single tab character.
 
@@ -106,11 +106,11 @@ The output results for `pathfinder` will follow a structure as follows:
 The output results for `actorconnections` will follow a structure as follows:
 
 > Actor1<TAB>Actor2<TAB>Year<br />
-BACON, KEVIN (I)<TAB>HOUNSOU, DJIMON<TAB>1992<br />
-BACON, KEVIN (I)<TAB>KIDMAN, NICOLE<TAB>1991<br />
-BACON, KEVIN (I)<TAB>WILLIS, BRUCE<TAB>1990<br />
-BACON, KEVIN (I)<TAB>GIAMATTI, PAUL<TAB>1992<br />
-HOUNSOU, DJIMON<TAB>50 CENT<TAB>2003<br />
+BACON, KEVIN (I)&lt;TAB&gt;HOUNSOU, DJIMON<TAB>1992<br />
+BACON, KEVIN (I)&lt;TAB&gt;KIDMAN, NICOLE<TAB>1991<br />
+BACON, KEVIN (I)&lt;TAB&gt;WILLIS, BRUCE<TAB>1990<br />
+BACON, KEVIN (I)&lt;TAB&gt;GIAMATTI, PAUL<TAB>1992<br />
+HOUNSOU, DJIMON&lt;TAB&gt;50 CENT<TAB>2003<br />
 
 The '<TAB>' denotes a single tab character.
 
