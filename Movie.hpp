@@ -3,12 +3,14 @@
  * Author: Miguel Vargas <m6vargas>
  * Date:   June 1, 2016
  *
- * Add description here!
+ * The Movie class is used to define all
+ * the various movie objects in the graph.
  */
 
 #ifndef MOVIE_HPP
 #define MOVIE_HPP
 
+/* Forward declaration */
 class ActorNode;
 
 class Movie {
