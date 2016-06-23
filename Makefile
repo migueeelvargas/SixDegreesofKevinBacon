@@ -1,4 +1,4 @@
-# A simple makefile for CSE 100 PA4
+# A simple makefile for six degrees of kevin bacon repo
 
 CC=g++
 CXXFLAGS=-std=c++11
